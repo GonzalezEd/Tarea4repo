@@ -4,10 +4,23 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Esta clase realiza el comportamiento de una cuenta bancaria, ingreso de dinero, retirada y consulta de saldo
+ * 
+ * @author Eduardo
+ * @version 1.0
+ * @since 03/03/2020
+ * @see <a href = https://docs.oracle.com/javase/7/docs/api/java/io/IOException.html> Clase IOException de java </a>
+ * 
+ */
+
 public class CCuenta {
 
-	/* ATRIBUTOS DE LA CLASE CCUENTA ENCAPSULADOS CON 
+	/**
+	 * @return
+	 * ATRIBUTOS DE LA CLASE CCUENTA ENCAPSULADOS CON 
 	 * VISUALIZACION PRIVADA Y CON GET Y SETS GENERADOS
+	 * 
 	 */
   
     protected String nombre;
@@ -18,15 +31,18 @@ public class CCuenta {
     
     public CCuenta ()    
     {
-    	/*
+    	/**
+    	 * @return
     	 * CONSTRUCTOR DE LA CLASE CCUENTA POR DEFECTO
+    	 * 
     	 */
     }
     
     public CCuenta (String nom, String cue, double sal, double tipo) 
     {
-    	/*
+    	/**
     	 * CONSTRUCTOR DE LA CLASE CCUENTA CON PARAMETROS
+    	 * @return
     	 */
         nombre =nom;
         cuenta=cue;
@@ -53,8 +69,9 @@ public class CCuenta {
     
     public void ingresar(double cantidad) throws Exception  
     {
-    	 /*
+    	 /**
          * METODO INGRESAR, COMPRUEBA QUE LA CANTIDAD A INGRESAR NO ES MENOR QUE 0
+         * @return
          */
         if (cantidad<0){
             throw new Exception("No se puede ingresar una cantidad negativa");}
@@ -66,9 +83,10 @@ public class CCuenta {
     
     public void retirar (double cantidad) throws Exception
     {
-    	/*
+    	/**
     	 * METODO RETIRAR, COMPRUEBA QUE LA CANTIDAD A RETIRAR NO SEA MENOR QUE 0 Y QUE LA CUENTA
     	 * DISPONGA DE LA CANTIDAD
+    	 * @return
     	 */
         if (cantidad < 0){
             throw new Exception ("No se puede retirar una cantidad negativa");}
@@ -103,8 +121,9 @@ public class CCuenta {
   }
 
 static void operativa_cuenta(float cantidad) {
-	/*
+	/**
 	 * METODO OPERATIVA CUENTA GENERADO A PARTIR DE LA CLASE MAIN
+	 * @return
 	 */
 		CCuenta cuenta1;
         double saldoActual;
