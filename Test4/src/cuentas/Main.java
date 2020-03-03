@@ -14,6 +14,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+    	/*
+    	 * METODO MAIN
+    	 */
         CCuenta.operativa_cuenta(10);
     }
 
@@ -21,6 +24,9 @@ public class Main {
 
 
 	public static void operativa_cuenta(CCuenta miCuenta, float cantidad,int opcion){
+		/*
+		 * METODO OPERATIVA CUENTA CEDIDO POR LOS APUNTES Y QUE NO SE PUEDE MOVER
+		 */
         if(opcion==2){
             try 
             {

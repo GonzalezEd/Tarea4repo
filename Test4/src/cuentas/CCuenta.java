@@ -6,7 +6,9 @@ import java.util.logging.Logger;
 
 public class CCuenta {
 
-
+	/* ATRIBUTOS DE LA CLASE CCUENTA ENCAPSULADOS CON 
+	 * VISUALIZACION PRIVADA Y CON GET Y SETS GENERADOS
+	 */
   
     protected String nombre;
     private String cuenta;
@@ -14,12 +16,18 @@ public class CCuenta {
     private double tipoInterés;
 
     
-    public CCuenta ()
+    public CCuenta ()    
     {
+    	/*
+    	 * CONSTRUCTOR DE LA CLASE CCUENTA POR DEFECTO
+    	 */
     }
     
-    public CCuenta (String nom, String cue, double sal, double tipo)
+    public CCuenta (String nom, String cue, double sal, double tipo) 
     {
+    	/*
+    	 * CONSTRUCTOR DE LA CLASE CCUENTA CON PARAMETROS
+    	 */
         nombre =nom;
         cuenta=cue;
         saldo=sal;
@@ -43,8 +51,11 @@ public class CCuenta {
     }
 
     
-    public void ingresar(double cantidad) throws Exception
+    public void ingresar(double cantidad) throws Exception  
     {
+    	 /*
+         * METODO INGRESAR, COMPRUEBA QUE LA CANTIDAD A INGRESAR NO ES MENOR QUE 0
+         */
         if (cantidad<0){
             throw new Exception("No se puede ingresar una cantidad negativa");}
         setSaldo(saldo + cantidad);
@@ -55,6 +66,10 @@ public class CCuenta {
     
     public void retirar (double cantidad) throws Exception
     {
+    	/*
+    	 * METODO RETIRAR, COMPRUEBA QUE LA CANTIDAD A RETIRAR NO SEA MENOR QUE 0 Y QUE LA CUENTA
+    	 * DISPONGA DE LA CANTIDAD
+    	 */
         if (cantidad < 0){
             throw new Exception ("No se puede retirar una cantidad negativa");}
         if (estado()< cantidad){
@@ -88,6 +103,9 @@ public class CCuenta {
   }
 
 static void operativa_cuenta(float cantidad) {
+	/*
+	 * METODO OPERATIVA CUENTA GENERADO A PARTIR DE LA CLASE MAIN
+	 */
 		CCuenta cuenta1;
         double saldoActual;
         int opcion=0;
